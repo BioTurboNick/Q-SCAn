@@ -1,0 +1,96 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImageJPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CellProfilerPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SourceImageRootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShadingCorrectionPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Brightfield Shading</Value>
+    </Setting>
+    <Setting Name="DarkCurrentCorrectionPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dark Current</Value>
+    </Setting>
+    <Setting Name="AnalysisSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> Analysis</Value>
+    </Setting>
+    <Setting Name="InputImagesDirName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Input Images</Value>
+    </Setting>
+    <Setting Name="OutputDataDirName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Output Data</Value>
+    </Setting>
+    <Setting Name="ImageJ_OpenAndExportChannelsFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OpenAndExportChannels.ijm</Value>
+    </Setting>
+    <Setting Name="ImageJ_CalculateMedianImageFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CalculateMedianImage.ijm</Value>
+    </Setting>
+    <Setting Name="CellProfiler_BackgroundCorrectionFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0 - Background Correction.cp</Value>
+    </Setting>
+    <Setting Name="CellProfiler_IdentifyCellsFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1 - Identify Cells and Background.cp</Value>
+    </Setting>
+    <Setting Name="CellProfiler_MeasureImageIntensitiesFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2 - Measure Image Intensities and Finish Correction.cp</Value>
+    </Setting>
+    <Setting Name="CellProfiler_FilterCellsAndIdentifyCompartmentsFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3 - Filter Cells and Identify Compartments.cp</Value>
+    </Setting>
+    <Setting Name="CellProfiler_CalculateLocalizationIndicesAndExportIntensitiesFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4 - Calculate Localization Index and Export Intensity Data.cp</Value>
+    </Setting>
+    <Setting Name="BeepOnComplete" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DarkCurrentIsTimeSeries" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ImageJ_CalculateMedianImageTimeSeriesFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CalculateMedianImageFromTimeSeries.ijm</Value>
+    </Setting>
+    <Setting Name="CellProfilerPluginsPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KeepAwake" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CheckPipelineSuccess" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NumberOfOtherCompartments" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Metadata" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.*\\(?P&lt;Strain&gt;.*) - (?P&lt;Condition&gt;.*) - Field (?P&lt;Field&gt;\S*).lsm</Value>
+    </Setting>
+    <Setting Name="NumberOfFluorescenceChannels" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="SetMetadataManually" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Output_NormalizationFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Within-Cell Image Intensities for Normalization.csv</Value>
+    </Setting>
+    <Setting Name="Output_CompartmentLocalizationData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Compartment Localization Data.csv</Value>
+    </Setting>
+    <Setting Name="ShowCPActivity" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PythonPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CellProfilerLogFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">QSCAn CellProfiler Log.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

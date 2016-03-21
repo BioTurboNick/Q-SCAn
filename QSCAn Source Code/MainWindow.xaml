@@ -1,0 +1,61 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:QSCAn"
+    Title="Q-SCAn" Height="480" MinHeight="480" MaxHeight="480" Width="500" ResizeMode="CanMinimize" Top="0" Left="0">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41" />
+            <RowDefinition Height="34" />
+            <RowDefinition />
+            <RowDefinition Height="34"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="0 0 0 2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="SetupButton" Content="Setup..." FontSize="20" Margin="0 0 2 0" Padding="5" />
+            <Button Grid.Column="1" x:Name="RunButton" Content="Start Run" FontSize="20" Margin="2 0 2 0" Padding="5" Background="Green" Foreground="White" />
+            <Button Grid.Column="1" x:Name="PauseButton" Content="Pause Run" FontSize="20" Margin="2 0 2 0" Padding="5" Background="DarkGoldenrod" Foreground="White" Visibility="Hidden" />
+            <Button Grid.Column="1" x:Name="ResumeButton" Content="Resume Run" FontSize="20" Margin="2 0 2 0" Padding="5" Background="Green" Foreground="White" Visibility="Hidden" />
+            <Button Grid.Column="2" x:Name="StopButton" Content="Stop Run" FontSize="20" Margin="2 0 0 0" Padding="5" IsEnabled="False" Background="DarkRed" Foreground="White" />
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0 2 0 2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Source:" Margin="0 0 2 0" FontSize="20" />
+            <TextBox x:Name="SourceFolderTextBox" Grid.Column="1" Margin="2 0 2 0" Text="{Binding Path=DataContext, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}},UpdateSourceTrigger=PropertyChanged}" FontSize="20" />
+            <Button x:Name="SourceFolderButton" Grid.Column="2" Margin="2 0 0 0" Content="..." FontSize="20" />
+        </Grid>
+
+        <StackPanel Grid.Row="2">
+            <Line Stroke="Black" StrokeThickness="1" X2="{Binding Path=ActualWidth, RelativeSource={RelativeSource Self}}" Margin="0 2 0 2" />
+            <TextBlock x:Name="Step1Text" Text="Step 1 – Extracting images..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step2Text" Text="Step 2 – Calculating background correction images..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step3Text" Text="Step 3 – Correcting for dark current and brightfield shading..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step4Text" Text="Step 4 – Identifying cells..." FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step5Text" Text="Step 5 – Subtracting marker background and measuring within-cell intensities..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step6Text" Text="Step 6 – Normalizing marker intensities, identifying compartments, and filtering cells..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+            <TextBlock x:Name="Step7Text" Text="Step 7 – Measuring compartment intensities and calculating localization indices..." TextWrapping="Wrap" FontSize="20" Margin="0 2 0 2" Foreground="Gray"/>
+        </StackPanel>
+
+        <Grid Grid.Row="3" Margin="0 2 0 0">
+            <Button x:Name="ViewReadmeButton" HorizontalAlignment="Center" Content="View Readme" Visibility="Visible" FontSize="20" Padding="5 0 5 0" />
+            <TextBlock x:Name="StatusText" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock x:Name="TimeElapsedText" Text="{Binding Path=TimeElapsed, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}, AncestorLevel=1}}" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Visibility="Hidden" />
+            <ProgressBar x:Name="ActivityIndicator" IsIndeterminate="True" Width="200" Height="10"  Visibility="Hidden"/>
+            <Button x:Name="ClearFilesButton" HorizontalAlignment="Right" Content="Clear Files" Visibility="Hidden" FontSize="20" Padding="5 0 5 0" />
+            <Button x:Name="ViewFilesButton" HorizontalAlignment="Right" Content="View Files" Visibility="Hidden" FontSize="20" Padding="5 0 5 0" />
+            <Button x:Name="OpenLogButton" HorizontalAlignment="Left" Content="View Log" Visibility="Hidden" FontSize="20" Padding="5 0 5 0" />
+        </Grid>
+    </Grid>
+</Window>
